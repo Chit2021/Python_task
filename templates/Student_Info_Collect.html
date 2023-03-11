@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block containt%}
+
+{%include 'navbar.html'%}
+<br>
+{%for i in read%}
+<div class="card bg-dark text-light">
+    <div class="card-body">
+      <h5 class="card-title">Student  Name : {{i.Student_Name}}</h5>
+      <p class="card-text">Student School : {{i.Student_School}}</p>
+      <p class="card-text">Roll Number : {{i.Student_RollNo}}</p>
+      <p class="card-text">STD : {{i.Student_Std}}</p>
+      <p class="card-text">Location : {{i.Location}}</p>
+    
+    </div>
+    <hr>
+    {%endfor%}
+{%include 'footer.html'%}
+
+    {%endblock%}

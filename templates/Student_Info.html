@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block containt%}
+{%include 'navbar.html'%}
+
+<form method="POST">
+    <br>
+    {%load crispy_forms_tags%}
+    {%csrf_token%}
+    {{form|crispy}}
+    <br>
+    <button type="submit" class="btn btn-outline-primary">Save Data</button>
+    <button type="submit" class="btn btn-outline-primary">Back</button>
+    <br>
+    
+    <br>
+<h2 class="text-primary">Intructions -</h2>
+<p class="text-primary">
+    1)Please Fill Information Properly.<br>
+    2)Obey the rules of library.<br>
+    3)Handle books carefully<br>
+    4)Dont forget to wear mask in library<br>
+
+</p>
+
+</form>
+{%include 'footer.html'%}
+
+{%endblock%}

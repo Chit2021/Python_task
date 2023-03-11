@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block containt%}
+
+{%include 'nav_admin.html'%}
+<br>
+{%for i in read%}
+<div class="card bg-dark text-light">
+    <div class="card-body">
+      <h5 class="card-title">Name : {{i.name}}</h5>
+      <p class="card-text">ISBN : {{i.isbn}}</p>
+      <p class="card-text">Author : {{i.author}}</p>
+      <p class="card-text">Category : {{i.category}} </p>
+ 
+      <a href="{%url 'Update_Book' i.id%}" class="card-link btn btn-primary"> Update Book Entry</a>
+      <a href="{%url 'Delete_Book' i.id%}" class="card-link btn btn-primary"> Delete Book Record</a>
+      
+    </div>
+    <hr>
+    {%endfor%}
+    {%endblock%}
+
+
+
